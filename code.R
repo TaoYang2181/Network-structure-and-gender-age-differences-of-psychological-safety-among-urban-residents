@@ -230,12 +230,14 @@ centrality_male_items
 centrality_female_items
 
 #Comparison of Differences in Dimension Centrality Indicators
-NCT_centrality_gender_dimensions <- NCT(net_male_dimensions,net_female_dimensions,
-                             weighted=TRUE,
-                             test.edges=TRUE,edges="ALL",  
-                             test.centrality=TRUE, 
-                             centrality=c("strength"),
-                             nodes="all")
+set.seed(123)
+NCT_centrality_gender_dimensions <- NCT(net_male_dimensions, net_female_dimensions,
+                                        it = 1000,
+                                        weighted = TRUE,
+                                        test.edges = TRUE, edges = "ALL",  
+                                        test.centrality = TRUE, 
+                                        centrality = c("strength"),
+                                        nodes = "all")
 summary(NCT_centrality_gender_dimensions)
 
 sum(NCT_centrality_gender_dimensions$einv.pval$`p-value`<0.05)
@@ -243,7 +245,9 @@ sum(NCT_centrality_gender_dimensions$einv.pval$`p-value`<0.05)
 
 
 #Comparison of Differences in Central Indicators of  Items
+set.seed(123)
 NCT_centrality_gender_items <- NCT(net_male_items,net_female_items,
+                                       it = 1000,
                                         weighted=TRUE,
                                         test.edges=TRUE,edges="ALL",  
                                         test.centrality=TRUE, 
@@ -474,7 +478,9 @@ centrality_youth_items
 centrality_midlife_items
 
 #Comparison of Differences in Age Dimension Centrality Indicators
+set.seed(123)
 NCT_centrality_age_dimensions <- NCT(net_youth_dimensions,net_midlife_dimensions,
+                                        it = 1000,
                                         weighted=TRUE,
                                         test.edges=TRUE,edges="ALL",
                                         test.centrality=TRUE, 
@@ -487,7 +493,9 @@ sum(NCT_centrality_age_dimensions$einv.pval$`p-value`<0.05)
 
 
 #items
+set.seed(123)
 NCT_centrality_age_items <- NCT(net_youth_items,net_midlife_items,
+                                    it = 1000,
                                    weighted=TRUE,
                                    test.edges=TRUE,edges="ALL",  
                                    test.centrality=TRUE, 
