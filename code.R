@@ -8,7 +8,7 @@ library("bootnet")
 library("NetworkComparisonTest")
 
 ###data
-mydata  <- read.csv("C:/Users/yangt/Desktop/paper/网络分析-心理安全感/BMC/返修/PSS.csv")
+mydata  <- read.csv("C:/PSS.csv")
 items <- mydata[,9:44]
 dimensions  <- mydata[,45:51]
 
