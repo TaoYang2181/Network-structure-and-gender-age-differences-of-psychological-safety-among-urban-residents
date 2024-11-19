@@ -8,7 +8,7 @@ library("bootnet")
 library("NetworkComparisonTest")
 
 ###data
-mydata  <- read.csv("C:/PSS.csv")
+mydata  <- read.csv("PSS.csv")
 items <- mydata[,9:44]
 dimensions  <- mydata[,45:51]
 
