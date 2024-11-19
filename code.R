@@ -231,7 +231,6 @@ centrality_female_items
 
 #Comparison of Differences in Dimension Centrality Indicators
 NCT_centrality_gender_dimensions <- NCT(net_male_dimensions,net_female_dimensions,
-                             it=1000,
                              weighted=TRUE,
                              test.edges=TRUE,edges="ALL",  
                              test.centrality=TRUE, 
@@ -245,7 +244,6 @@ sum(NCT_centrality_gender_dimensions$einv.pval$`p-value`<0.05)
 
 #Comparison of Differences in Central Indicators of  Items
 NCT_centrality_gender_items <- NCT(net_male_items,net_female_items,
-                                        it=1000,
                                         weighted=TRUE,
                                         test.edges=TRUE,edges="ALL",  
                                         test.centrality=TRUE, 
@@ -477,7 +475,6 @@ centrality_midlife_items
 
 #Comparison of Differences in Age Dimension Centrality Indicators
 NCT_centrality_age_dimensions <- NCT(net_youth_dimensions,net_midlife_dimensions,
-                                        it=1000,
                                         weighted=TRUE,
                                         test.edges=TRUE,edges="ALL",
                                         test.centrality=TRUE, 
@@ -491,7 +488,6 @@ sum(NCT_centrality_age_dimensions$einv.pval$`p-value`<0.05)
 
 #items
 NCT_centrality_age_items <- NCT(net_youth_items,net_midlife_items,
-                                   it=1000,
                                    weighted=TRUE,
                                    test.edges=TRUE,edges="ALL",  
                                    test.centrality=TRUE, 
