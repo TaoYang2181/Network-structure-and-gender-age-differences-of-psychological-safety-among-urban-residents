@@ -8,7 +8,7 @@ library("bootnet")
 library("NetworkComparisonTest")
 
 ###data
-mydata  <- read.csv("PSS.csv")
+mydata  <- read.csv("C:/Users/yangt/Desktop/paper/网络分析-心理安全感/BMC/返修-1/PSS.csv")
 items <- mydata[,9:44]
 dimensions  <- mydata[,45:51]
 
@@ -193,7 +193,7 @@ myplot_female_items<-plot(net_female_items<- estimateNetwork(female_items,
                                               default = "EBICglasso", tuning = 0.5,
                                               corMethod="cor",corArgs=list(method="spearman",                                 
                                               use="pairwise.complete.obs")),
-                   layout = "spring",
+                  layout = myplot_male_items$layout,
                    groups = list("GS" = 1:10, 
                                  "CE" = 11:15,
                                  "NPF" = 16:22,
@@ -438,7 +438,7 @@ myplot_midlife_items<-plot(net_midlife_items<- estimateNetwork(midlife_items,
                                                              default = "EBICglasso", tuning = 0.5,
                                                              corMethod="cor",corArgs=list(method="spearman",                                 
                                                                                           use="pairwise.complete.obs")),
-                          layout = "spring",
+                          layout =myplot_youth_items$layout,
                           groups = list("GS" = 1:10, 
                                         "CE" = 11:15,
                                         "NPF" = 16:22,
